@@ -30,3 +30,15 @@ class App:
     def get_group_details(self, group_id):
         for user in self.groups[group_id]:
             print(user.first_name, user.last_name, user.user_id)
+
+    def get_users_id(self):
+        users_ids = []
+        for user in self.users:
+            users_ids.append(self.users[user].user_id)
+        return users_ids
+
+    def get_groups_id(self):
+        groups_ids = []
+        for group in self.groups:
+            groups_ids.append(self.groups[group].group_id)
+        return groups_ids
