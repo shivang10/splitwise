@@ -25,7 +25,7 @@ class App:
 
     def list_groups(self):
         for group in self.groups:
-            print(self.groups[group].name, self.groups[group].desc, self.groups[group.group_id])
+            print(self.groups[group].name, self.groups[group].desc, self.groups[group].group_id)
 
     def get_group_details(self, group_id):
         for user in self.groups[group_id]:
