@@ -43,6 +43,20 @@ def main():
                 else:
                     current_new_users.append(text_input)
             splitwise.add_user_to_group(group_id, current_new_users)
+        elif operation == 6:
+            print("Enter the expense details")
+            user_id = input("Enter the user_id")
+            amount = input("Enter the expense")
+            group_id = input("Enter the group id")
+            splitwise.add_expense(group_id, amount, user_id)
+        elif operation == 7:
+            print("Enter the group id of which you want to see expense")
+            group_id = input("Enter the group_id")
+            splitwise.get_group_expense(group_id)
+        elif operation == 8:
+            print("Enter the group id of which you want to see every user's expenses")
+            group_id = input("Enter the group_id")
+            splitwise.get_every_user_expense_in_group(group_id)
 
 
 main()

@@ -42,3 +42,12 @@ class App:
         for group in self.groups:
             groups_ids.append(self.groups[group].group_id)
         return groups_ids
+
+    def add_expense(self, group_id, amount, user_id):
+        self.groups[group_id].add_expense(user_id, amount)
+
+    def get_group_expense(self, group_id):
+        self.groups[group_id].get_group_expenses()
+
+    def get_every_user_expense_in_group(self, group_id):
+        self.groups[group_id].get_per_user_expense()
