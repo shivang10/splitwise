@@ -51,3 +51,6 @@ class App:
 
     def get_every_user_expense_in_group(self, group_id):
         self.groups[group_id].get_per_user_expense()
+
+    def settle_group_expense(self, group_id):
+        self.groups[group_id].settle_group_expense()

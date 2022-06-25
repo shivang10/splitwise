@@ -27,3 +27,6 @@ class Group:
 
     def get_per_user_expense(self):
         self.expenses.get_per_user_expense()
+
+    def settle_group_expense(self):
+        self.expenses.settle_expense(self.users)
