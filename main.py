@@ -9,6 +9,10 @@ def main():
         print("3 == Create Group")
         print("4 == Get Groups")
         print("5 == Add Members to group")
+        print("6 == Enter the expense details")
+        print("7 == Enter group id to see expense details")
+        print("8 == Enter group id to see every user's expense")
+        print("9 == Settle expense")
         print("0 == exit")
         operation = int(input())
 
@@ -57,6 +61,10 @@ def main():
             print("Enter the group id of which you want to see every user's expenses")
             group_id = input("Enter the group_id")
             splitwise.get_every_user_expense_in_group(group_id)
+        elif operation == 9:
+            print("Enter group id to settle group expense")
+            group_id = input("Enter the group_id")
+            splitwise.settle_group_expense(group_id)
 
 
 main()
